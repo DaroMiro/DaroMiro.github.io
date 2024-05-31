@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальное задание 1</title>
+</head>
+<body>
+    <h1>Индивидуальное задание 1</h1>
+    <p>Выберите действие:</p>
+    <button onclick="findMin()">Найти минимум двух чисел</button>
+    <button onclick="findMax()">Найти максимум двух чисел</button>
+    <button onclick="checkEqual()">Проверить равенство двух чисел</button>
+
+    <script>
+        function findMin() {
+            let a = prompt("Введите первое число для нахождения минимума:", "0");
+            let b = prompt("Введите второе число для нахождения минимума:", "0");
+
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Введите допустимые числа!");
+                return;
+            }
+
+            alert("Минимум: " + (a < b ? a : b));
+        }
+
+        function findMax() {
+            let a = prompt("Введите первое число для нахождения максимума:", "0");
+            let b = prompt("Введите второе число для нахождения максимума:", "0");
+
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Введите допустимые числа!");
+                return;
+            }
+
+            alert("Максимум: " + (a > b ? a : b));
+        }
+
+        function checkEqual() {
+            let a = prompt("Введите первое число для проверки равенства:", "0");
+            let b = prompt("Введите второе число для проверки равенства:", "0");
+
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Введите допустимые числа!");
+                return;
+            }
+
+            alert("Числа равны: " + (a === b));
+        }
+    </script>
+</body>
+</html>
